@@ -1,0 +1,20 @@
+<div>
+  <h1>Internal server error</h1>
+  @if (error) {
+  <h2 class="text-danger">Error: {{ error.message }}</h2>
+  <p class="fw-bold">Note: If you are seeing this error then angular is not to blame!</p>
+  <p>What to do next?</p>
+  <ol>
+    <li>Open chrome dev tools and check the failing network request in the network tab</li>
+    <li>Examine the url of the failing request</li>
+    <li>Reproduce the error in rest client - if you can reproduce the error then angular is not to blame!</li>
+  </ol>
+  <p class="fw-bold">Following is the stack trace - check the first 2 lines this tells you exactly which line of code
+    caused the problem!</p>
+  <p>
+    <code>
+        {{ error.details }}
+      </code>
+  </p>
+  }
+</div>
